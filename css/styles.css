@@ -1,0 +1,68 @@
+body{
+    padding:10px 20px 100px 20px;
+    background-color:#212121;   
+}
+h1{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    font-size: 20px;
+}
+p{                                  
+    font-size: 14px;
+}
+
+.card{
+    background-color:#212121;
+}
+.footer{
+    
+    background-color:rgba(0, 0, 0, 0.131);
+}
+.bottom{
+background-color: rgb(245, 238, 228);
+height: 130vh;
+}
+.welcome{
+    background-color:rgba(0, 0, 0, 0.131);
+}
+.final{
+    height: 30vh;
+
+}
+
+
+
+:root{
+    --offcanvas-width:200px;
+   --topNavbarHeight : 56px;
+}
+
+.sidebar-nav{
+    width: var(--offcanvas-width);
+}
+.sidebar-link{
+    display: flex;
+    align-items: center;
+}
+.sidebar-link .right-icon{
+    display: inline-flex;
+}
+@media(min-width:992px) {
+    body{
+        overflow: auto !important;
+    }
+    .offcanvas-backdrop::before{
+        display: none;
+    }
+    main{
+        margin-left: var(--offcanvas-width);
+    }
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(150% - var(--topNavbarHeight));
+    }
+}
